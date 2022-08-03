@@ -32,7 +32,7 @@ class ZipCodeController extends Controller
         ];
         foreach($data as $key => $value){
             if(!$response['zip_code']){
-                $response['zip_code'] = $value['zip_code'];
+                $response['zip_code'] = $value['zipcode'];
                 $response['locality'] = strtoupper($value['locality']);
                 $response['federal_entity'] = [
                     'key' => (int)$value['id_state'],
