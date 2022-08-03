@@ -24,7 +24,7 @@ class ZipCodeModel extends DBModel
         $query .= ' INNER JOIN city c ON (c.id=s.city_id)';
         $query .= ' INNER JOIN state ON (state.id=c.state_id)';
         $query .= ' INNER JOIN municipality m ON (m.state_id=c.state_id) ';
-        $query .= ' WHERE zip_code='. $zip_code;
+        $query .= ' WHERE zipcode='. $zip_code;
         $query .= ' AND m.code=c.code_municipality';
         $query .= ' ORDER BY s.code';
         $response = $this->exec_query($query);
