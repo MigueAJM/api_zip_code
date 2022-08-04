@@ -57,7 +57,7 @@ class ZipCodeController extends Controller
             $response['settlements'][] = [
                 'key' => (int)$value['settlement_key'],
                 'name' => strtoupper($value['settlement']),
-                'zone_type' => $value['zone_type'],
+                'zone_type' => strtoupper($value['zone_type']),
                 'settlement_type' => ['name' => $value['settlement_type']]
             ];
         }
