@@ -9,7 +9,7 @@ class ZipCodeModel extends DBModel
      * @param Int $zip_code
      * @return DBModelResponse
      */
-    public function serachZipCode($zip_code)
+    public function getSettlements($zip_code)
     {
         $query = 'SELECT';
         $query .= ' state.id as id_state,';

@@ -11,7 +11,7 @@ class ZipCodeController extends Controller
      * @param int $zip_code
      * @return JsonResponse
      */
-    public function serachZipCode($zip_code)
+    public function getSettlements($zip_code)
     {
         if (!is_numeric($zip_code)) {
             return [
@@ -20,7 +20,7 @@ class ZipCodeController extends Controller
             ];
         }
         $model = new ZipCodeModel();
-        $response = $model->serachZipCode($zip_code);
+        $response = $model->getSettlements($zip_code);
         if($response['status']){
             $response = $this->customResponse($response['data']);
         }

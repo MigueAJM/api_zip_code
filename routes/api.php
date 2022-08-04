@@ -16,3 +16,4 @@ use App\Http\Controllers\SettlementController;
 */
 
 Route::get('/zip_code/{zip_code}', [SettlementController::class, 'getSettlements'])->name('search_zip_code');
+Route::get('/zip_codedb/{zip_code}', [ZipCodeController::class, 'getSettlements'])->name('search_zip_codedb');
