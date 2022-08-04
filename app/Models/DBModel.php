@@ -36,6 +36,8 @@ class DBModel extends Model
     }
 
     /**
+     * Execute query.
+     * @param String $query
      * @return status and data|message
      */
     public function exec_query($query): array

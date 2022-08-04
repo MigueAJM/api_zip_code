@@ -6,6 +6,11 @@ use App\Models\ZipCodeModel;
 
 class ZipCodeController extends Controller
 {
+    /**
+     * Search for the settlements that belong to the zip code provided.
+     * @param int $zip_code
+     * @return JsonResponse
+     */
     public function serachZipCode($zip_code)
     {
         if (!is_numeric($zip_code)) {
@@ -22,6 +27,11 @@ class ZipCodeController extends Controller
         return response()->json($response);
     }
 
+    /**
+     * Standardize the format of my response.
+     * @param Array $data 
+     * @return Array
+     */
     public function customResponse($data){
         $response = [
             'zip_code' => '',

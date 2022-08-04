@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ZipCodeController;
+use App\Http\Controllers\SettlementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,4 @@ use App\Http\Controllers\ZipCodeController;
 |
 */
 
-Route::get('/zip_code/{zip_code}', [ZipCodeController::class, 'serachZipCode'])->name('search_zip_code');
+Route::get('/zip_code/{zip_code}', [SettlementController::class, 'getSettlements'])->name('search_zip_code');

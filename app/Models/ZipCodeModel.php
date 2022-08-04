@@ -4,7 +4,12 @@ namespace App\Models;
 
 class ZipCodeModel extends DBModel
 {
-    public function serachZipCode(int $zip_code)
+    /**
+     * Build petition for settlement search.
+     * @param Int $zip_code
+     * @return DBModelResponse
+     */
+    public function serachZipCode($zip_code)
     {
         $query = 'SELECT';
         $query .= ' state.id as id_state,';
